@@ -56,4 +56,4 @@ else:
 <img width="925" height="333" alt="image" src="https://github.com/user-attachments/assets/4b5fdff4-9bea-4a00-a9fa-f742fb889e34" />
 
 ## Result :
-
+Thsu the python program is implemented and executed successfully
