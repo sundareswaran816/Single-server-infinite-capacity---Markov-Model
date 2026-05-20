@@ -23,9 +23,37 @@ This is a queuing model in which the arrival is Marcovian and departure distribu
 
  
 ## Program
-![image](https://github.com/ramjan1729/Single-server-infinite-capacity---Markov-Model/assets/103921593/5f1fd58d-5929-4c51-89ea-4cef009e5bad)
+```
+REGSISTER NUMBER:212225220008
+NAME:AKILA S
 
+
+ArrivalTime = int(input("Enter the mean inter arrival time of objects from feeder (in secs) : "))
+ServiceTime = int(input("Enter the mean inter service time of the Lathe Machine (in secs) : "))
+TimeByRobot = int(input("Enter the time taken by the Robot (in secs) : "))
+
+Lambda = 1 / ArrivalTime
+Mu = 1 / ServiceTime
+
+print(f"Value of Lambda λ : {Lambda:.3f}")
+print(f"Value of Mu μ : {Mu:.3f}")
+
+if Lambda < Mu:
+    Ls = Lambda / (Mu - Lambda)
+    Lq = Ls - (Lambda / Mu)
+    Ws = Ls / Lambda
+    Wq = Lq / Lambda
+    print("Average number of objects in the system : %0.2f " % Ls)
+    print("Average number of objects in the conveyor :  %0.2f " % Lq)
+    print("Average waiting time of an object in the system : %0.2f secs" % Ws)
+    print("Average waiting time of an object in the conveyor : %0.2f secs" % Wq)
+    print("Probability that the system is busy : %0.2f " % (Lambda / Mu))
+    print("Probability that the system is empty : %0.2f " % (1 - Lambda / Mu))
+else:
+    print("Warning! Objects Over flow will happen in the conveyor")
+```
 ## Output :
+<img width="925" height="333" alt="image" src="https://github.com/user-attachments/assets/4b5fdff4-9bea-4a00-a9fa-f742fb889e34" />
 
 ## Result :
 
